@@ -1,0 +1,102 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .catalog-category-view .products-grid {
+        margin: .5rem 0;
+
+        .product-item-card {
+            background: @color__white;
+
+            .swatch-attribute.color {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .swatch-option.color {
+                    min-width: 15px;
+                    height: 15px;
+                    border-radius: 50%;
+                }
+
+                .swatch-option.color:not(.disabled):hover {
+                    border: 2px solid  @color__white;
+                    outline: .5px solid @color__blue_100;
+                }
+
+                .swatch-option.selected {
+                    border: 2px solid  @color__white;
+                    outline: .5px solid @color__gray_100;
+                }
+            }
+
+            .product-item-details {
+                padding: 0 3rem 2rem;
+            }
+
+            .product-discount {
+                width: max-content;
+                padding: 3px 6px;
+                font-size: ~'clamp(12px, 1vw, 14px)';
+                font-weight: 600;
+                color: @color__purple_100;
+                background: @color__pink_100;
+                border-radius: 45px;
+            }
+
+            .product-item-name {
+                padding: .5rem 0;
+                font-size: ~'clamp(14px, 1.5vw, 18px)';
+                font-weight: 200;
+                color: @color__black;
+            }
+
+            .dues-text {
+                font-size: ~'clamp(10px, 1vw, 12px)';
+                font-weight: 200;
+                color: @color__gray_100;
+            }
+
+            .dues-price {
+                font-size: ~'clamp(20px, 1.5vw, 24px)';
+                font-weight: 600;
+                color: @color__black;
+            }
+
+            div.price-final_price {
+                margin: .5rem 0;
+            }
+
+            span.price-final_price {
+                display: flex;
+                flex-direction: column;
+
+                .price-label {
+                    font-size: ~'clamp(8px, 1.5vw, 12px)';
+                    font-weight: 200;
+                    color: @color__black;
+                }
+
+                [data-price-type='finalPrice'] {
+                    font-size: ~'clamp(10px, 2vw, 14px)';
+                    font-weight: 400;
+                    color: @color__black;
+                }
+            }
+
+            .product-price {
+                display: flex;
+            }
+
+            .product-price-general {
+                margin: 2rem 0 0 .8rem;
+                font-size: ~'clamp(8px, 2vw, 12px)';
+                font-weight: 400;
+                color: @color__gray_100;
+                text-decoration: line-through;
+                opacity: .6;
+            }
+        }
+    }
+}
