@@ -1,0 +1,22 @@
+@import 'category/_index.less';
+
+.page-wrapper {
+    background: @color__gray-light;
+
+    .breadcrumbs {
+        margin: 0 auto;
+
+        .item:not(:last-child)::after {
+            margin: 0;
+        }
+
+        a {
+            color: @color__gray_200;
+        }
+
+        strong {
+            font-weight: 600;
+            color: @color__black;
+        }
+    }
+}
