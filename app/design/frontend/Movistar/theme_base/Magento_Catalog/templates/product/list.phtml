@@ -86,8 +86,7 @@ $_helper = $block->getData('outputHelper');
                             <?= /* @noEscape */ $block->getProductPrice($_product) ?>
                             <span class="product-price-general">
                             <? $_regularPrice = $block->escapeHtml($_product->getPriceInfo()->getPrice('regular_price')->getAmount()); ?>
-
-                               $<?= /* @noEscape */ number_format($_regularPrice, 2); ?>
+                            $<?= /* @noEscape */ number_format($_regularPrice, 2); ?>
                             </span>
                         </div>
                     </div>
