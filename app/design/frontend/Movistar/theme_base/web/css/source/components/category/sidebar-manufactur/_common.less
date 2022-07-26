@@ -1,0 +1,43 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .catalog-category-view .sidebar.sidebar-main {
+        width: 20%;
+        padding: 2.5rem 2rem 1.5rem 2rem;
+        margin: 0;
+        background: @color__white;
+
+        .filter-options-name {
+            font-size: ~'clamp(12px, 1.5vw, 16px)';
+            font-weight: 400;
+            color: @color__black;
+        }
+
+        .filter-options-item {
+            border: none;
+
+            .swatch-attribute-options {
+                display: grid;
+                grid-template-rows: 50px 50px;
+                grid-template-columns: 60px 60px 60px;
+                grid-gap: 1rem;
+
+                a {
+                    width: 50px;
+                    height: 50px;
+                    background: @color__gray-light;
+                    border-radius: 20%;
+                }
+
+                .swatch-option.image {
+                    min-width: 50px;
+                    min-height: 50px;
+                    max-height: 100%;
+                    border: 0;
+                }
+            }
+        }
+    }
+}
