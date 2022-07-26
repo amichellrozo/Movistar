@@ -46,7 +46,7 @@ $_helper = $block->getData('outputHelper');
     ?>
     <div class="products wrapper <?= /* @noEscape */ $viewMode ?> products-<?= /* @noEscape */ $viewMode ?>">
         <ol class="products list items product-items">
-            <?php /** @var $_product \Magento\Catalog\Model\Product */ ?>
+            <?php /** @var $_product \Magento\Catalog\Model\Product */?>
             <?php foreach ($_productCollection as $_product): ?>
             <li class="item product product-item">
                 <div class="product-item-card"
@@ -85,7 +85,9 @@ $_helper = $block->getData('outputHelper');
                         <div class="product-price">
                             <?= /* @noEscape */ $block->getProductPrice($_product) ?>
                             <span class="product-price-general">
-                               $<?= /* @noEscape */ $block->escapeHtml($_product->getPriceInfo()->getPrice('regular_price')->getAmount()) ?>
+                            <? $_regularPrice = $block->escapeHtml($_product->getPriceInfo()->getPrice('regular_price')->getAmount()); ?>
+
+                               $<?= /* @noEscape */ number_format($_regularPrice, 2); ?>
                             </span>
                         </div>
                     </div>
